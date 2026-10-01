@@ -1,0 +1,384 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Wood grain gradient for shelves -->
+    <linearGradient id="shelfTopGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9E653F" />
+      <stop offset="100%" stop-color="#84502E" />
+    </linearGradient>
+    <linearGradient id="shelfFrontGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#734222" />
+      <stop offset="100%" stop-color="#552F17" />
+    </linearGradient>
+    
+    <!-- Gold embossing gradient for book details -->
+    <linearGradient id="goldRib" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FCE794" />
+      <stop offset="50%" stop-color="#DFAC37" />
+      <stop offset="100%" stop-color="#FCE794" />
+    </linearGradient>
+
+    <!-- Subtle drop shadow for shelves -->
+    <filter id="shelfShadow" x="-5%" y="-10%" width="110%" height="180%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Bookshelf dark backing -->
+  <rect x="0" y="0" width="960" height="620" fill="#2E201B" />
+
+  <!-- ==========================================
+       SHELF 1 BOOKS (y: 20 to 150)
+       ========================================== -->
+  <g id="shelf1-books">
+    <!-- Book 1 Olive -->
+    <rect x="445" y="45" width="22" height="105" rx="2" fill="#3D5A45" />
+    <line x1="448" y1="60" x2="464" y2="60" stroke="#DFAC37" stroke-width="1.5" />
+    <line x1="448" y1="135" x2="464" y2="135" stroke="#DFAC37" stroke-width="1.5" />
+
+    <!-- Book 2 Terracotta -->
+    <rect x="470" y="32" width="26" height="118" rx="2" fill="#C95F3B" />
+    <circle cx="483" cy="70" r="4" fill="#DFAC37" />
+
+    <!-- Book 3 Deep Teal with white dots -->
+    <rect x="499" y="38" width="34" height="112" rx="2" fill="#2E7E7A" />
+    <circle cx="516" cy="65" r="2.5" fill="#E8F1F0" />
+    <circle cx="516" cy="78" r="2.5" fill="#E8F1F0" />
+    <circle cx="516" cy="91" r="2.5" fill="#E8F1F0" />
+
+    <!-- Book 4 Dusty Rose -->
+    <rect x="536" y="55" width="20" height="95" rx="2" fill="#D37E8C" />
+    <rect x="540" y="80" width="12" height="3" fill="#FFFFFF" opacity="0.6" />
+
+    <!-- Book 5 Teal -->
+    <rect x="559" y="30" width="28" height="120" rx="2" fill="#3B7D78" />
+    <line x1="562" y1="45" x2="584" y2="45" stroke="#DFAC37" stroke-width="2" />
+    <line x1="562" y1="135" x2="584" y2="135" stroke="#DFAC37" stroke-width="2" />
+
+    <!-- Book 6 Turquoise with bands -->
+    <rect x="590" y="42" width="30" height="108" rx="2" fill="#2A7B76" />
+    <rect x="594" y="58" width="22" height="12" fill="#1F5A56" rx="1" />
+    <rect x="594" y="118" width="22" height="6" fill="#1F5A56" rx="1" />
+
+    <!-- Book 7 Coral -->
+    <rect x="623" y="36" width="24" height="114" rx="2" fill="#C45A34" />
+    <line x1="626" y1="50" x2="644" y2="50" stroke="#FFE1B3" stroke-width="1.5" />
+
+    <!-- Book 8 Burgundy with Diamond -->
+    <rect x="650" y="48" width="36" height="102" rx="2" fill="#582433" />
+    <polygon points="668,75 674,83 668,91 662,83" fill="#DFAC37" />
+
+    <!-- Book 9 Mustard Gold -->
+    <rect x="689" y="38" width="24" height="112" rx="2" fill="#DA9834" />
+    <line x1="692" y1="52" x2="710" y2="52" stroke="#4F2E05" stroke-width="1.5" />
+    <line x1="692" y1="135" x2="710" y2="135" stroke="#4F2E05" stroke-width="1.5" />
+
+    <!-- Book 10 Teal -->
+    <rect x="716" y="45" width="26" height="105" rx="2" fill="#2D7A75" />
+    <circle cx="729" cy="80" r="5" fill="#3EA19B" />
+
+    <!-- Book 11 Mauve Pink -->
+    <rect x="745" y="32" width="24" height="118" rx="2" fill="#D87888" />
+    <line x1="748" y1="55" x2="766" y2="55" stroke="#FFFFFF" stroke-width="1.5" opacity="0.7" />
+
+    <!-- Book 12 Turquoise with Gold Header -->
+    <rect x="772" y="28" width="32" height="122" rx="2" fill="#2F7B77" />
+    <rect x="772" y="28" width="32" height="14" fill="#DFAC37" />
+    <line x1="775" y1="132" x2="801" y2="132" stroke="#DFAC37" stroke-width="2" />
+
+    <!-- Book 13 Olive Green -->
+    <rect x="807" y="34" width="22" height="116" rx="2" fill="#4B6E40" />
+
+    <!-- Book 14 Dark Plum -->
+    <rect x="832" y="50" width="30" height="100" rx="2" fill="#562235" />
+    <circle cx="847" cy="75" r="3.5" fill="#D87888" />
+
+    <!-- Book 15 Orange Red -->
+    <rect x="865" y="30" width="24" height="120" rx="2" fill="#D56A35" />
+    <line x1="868" y1="45" x2="886" y2="45" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6" />
+
+    <!-- Book 16 Tall Yellow Gold with Ribs -->
+    <rect x="892" y="20" width="36" height="130" rx="2" fill="#E2A236" />
+    <line x1="895" y1="40" x2="925" y2="40" stroke="#7A4D07" stroke-width="2" />
+    <line x1="895" y1="48" x2="925" y2="48" stroke="#7A4D07" stroke-width="2" />
+    <line x1="895" y1="130" x2="925" y2="130" stroke="#7A4D07" stroke-width="2" />
+
+    <!-- Book 17 Teal -->
+    <rect x="931" y="35" width="28" height="115" rx="2" fill="#2E7E7A" />
+  </g>
+
+  <!-- SHELF 1 WOOD PLANK -->
+  <g id="shelf1-plank" filter="url(#shelfShadow)">
+    <rect x="420" y="150" width="540" height="6" fill="url(#shelfTopGrad)" />
+    <rect x="420" y="156" width="540" height="12" fill="url(#shelfFrontGrad)" />
+  </g>
+
+
+  <!-- ==========================================
+       SHELF 2 BOOKS (y: 175 to 300)
+       ========================================== -->
+  <g id="shelf2-books">
+    <!-- Book 1 Teal -->
+    <rect x="475" y="195" width="32" height="105" rx="2" fill="#2A7672" />
+    <circle cx="491" cy="225" r="4" fill="#3D9E98" />
+
+    <!-- Book 2 Mustard -->
+    <rect x="510" y="205" width="22" height="95" rx="2" fill="#DA9834" />
+    <line x1="513" y1="220" x2="529" y2="220" stroke="#523206" stroke-width="1.5" />
+
+    <!-- Book 3 Sage Green -->
+    <rect x="535" y="190" width="34" height="110" rx="2" fill="#4D6F41" />
+    <rect x="539" y="206" width="26" height="10" fill="#37552D" />
+
+    <!-- Book 4 Rose Pink with Diamond -->
+    <rect x="572" y="210" width="28" height="90" rx="2" fill="#CD7282" />
+    <polygon points="586,238 592,246 586,254 580,246" fill="#FFFFFF" opacity="0.8" />
+
+    <!-- Book 5 Teal -->
+    <rect x="603" y="185" width="24" height="115" rx="2" fill="#28736F" />
+    <circle cx="615" cy="210" r="3" fill="#DFAC37" />
+
+    <!-- Book 6 Terracotta -->
+    <rect x="630" y="220" width="22" height="80" rx="2" fill="#D87A42" />
+
+    <!-- Book 7 Turquoise with White Circles -->
+    <rect x="655" y="185" width="36" height="115" rx="2" fill="#2F7E7A" />
+    <circle cx="673" cy="215" r="6" fill="#FFFFFF" opacity="0.8" />
+    <line x1="660" y1="280" x2="686" y2="280" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6" />
+
+    <!-- Book 8 Forest Green -->
+    <rect x="694" y="195" width="28" height="105" rx="2" fill="#466F3E" />
+    <rect x="698" y="210" width="20" height="6" fill="#DFAC37" />
+
+    <!-- Book 9 Rust Red with Gold Band -->
+    <rect x="725" y="180" width="28" height="120" rx="2" fill="#C45A34" />
+    <rect x="725" y="220" width="28" height="8" fill="#DFAC37" />
+
+    <!-- Book 10 Pink with Circle -->
+    <rect x="756" y="190" width="34" height="110" rx="2" fill="#D27484" />
+    <circle cx="773" cy="225" r="5" fill="#582433" />
+
+    <!-- Book 11 Teal with Spine Lines -->
+    <rect x="793" y="200" width="24" height="100" rx="2" fill="#2E7A75" />
+    <line x1="796" y1="215" x2="814" y2="215" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6" />
+    <line x1="796" y1="285" x2="814" y2="285" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6" />
+
+    <!-- Book 12 Dark Teal with 3 Dots -->
+    <rect x="820" y="185" width="32" height="115" rx="2" fill="#276F6B" />
+    <circle cx="836" cy="215" r="3" fill="#DFAC37" />
+    <circle cx="836" cy="230" r="3" fill="#DFAC37" />
+    <circle cx="836" cy="245" r="3" fill="#DFAC37" />
+
+    <!-- Book 13 Leaning Mustard Yellow (rotated) -->
+    <g transform="rotate(22, 856, 300)">
+      <rect x="856" y="180" width="34" height="120" rx="2" fill="#DA9834" />
+      <line x1="860" y1="200" x2="886" y2="200" stroke="#7A4D07" stroke-width="2" />
+      <line x1="860" y1="280" x2="886" y2="280" stroke="#7A4D07" stroke-width="2" />
+    </g>
+
+    <!-- Book 14 Leaning Teal Book (rotated) -->
+    <g transform="rotate(22, 894, 300)">
+      <rect x="894" y="190" width="28" height="110" rx="2" fill="#256A66" />
+      <rect x="898" y="215" width="20" height="8" fill="#C95F3B" />
+    </g>
+
+    <!-- Book 15 Burgundy -->
+    <rect x="944" y="180" width="26" height="120" rx="2" fill="#582433" />
+  </g>
+
+  <!-- SHELF 2 WOOD PLANK -->
+  <g id="shelf2-plank" filter="url(#shelfShadow)">
+    <rect x="420" y="300" width="540" height="6" fill="url(#shelfTopGrad)" />
+    <rect x="420" y="306" width="540" height="12" fill="url(#shelfFrontGrad)" />
+  </g>
+
+
+  <!-- ==========================================
+       SHELF 3 BOOKS (y: 325 to 450)
+       ========================================== -->
+  <g id="shelf3-books">
+    <!-- Leaning Book left -->
+    <g transform="rotate(-15, 470, 450)">
+      <rect x="470" y="350" width="28" height="100" rx="2" fill="#2A7874" />
+    </g>
+
+    <!-- Book 2 Rust Red -->
+    <rect x="502" y="340" width="26" height="110" rx="2" fill="#C65C38" />
+
+    <!-- Book 3 Mustard -->
+    <rect x="531" y="345" width="30" height="105" rx="2" fill="#DA9834" />
+    <circle cx="546" cy="375" r="4" fill="#6A4006" />
+
+    <!-- Book 4 Teal -->
+    <rect x="564" y="350" width="34" height="100" rx="2" fill="#2F7A76" />
+    <line x1="568" y1="365" x2="594" y2="365" stroke="#DFAC37" stroke-width="1.5" />
+
+    <!-- Book 5 Olive -->
+    <rect x="601" y="340" width="30" height="110" rx="2" fill="#466E3E" />
+    <circle cx="616" cy="370" r="3.5" fill="#C95F3B" />
+
+    <!-- Book 6 Slate Blue -->
+    <rect x="634" y="355" width="24" height="95" rx="2" fill="#3B5A7A" />
+
+    <!-- Book 7 Olive Green with Gold Ribs -->
+    <rect x="661" y="340" width="32" height="110" rx="2" fill="#486D3F" />
+    <line x1="664" y1="360" x2="690" y2="360" stroke="#DFAC37" stroke-width="2" />
+    <line x1="664" y1="430" x2="690" y2="430" stroke="#DFAC37" stroke-width="2" />
+
+    <!-- Book 8 Red Wine -->
+    <rect x="696" y="335" width="26" height="115" rx="2" fill="#B84438" />
+
+    <!-- Book 9 Plum -->
+    <rect x="725" y="345" width="34" height="105" rx="2" fill="#562235" />
+    <rect x="730" y="365" width="24" height="6" fill="#DFAC37" />
+
+    <!-- Book 10 Dusty Rose with 3 Dots -->
+    <rect x="762" y="350" width="32" height="100" rx="2" fill="#D37E8C" />
+    <circle cx="778" cy="375" r="2.5" fill="#562235" />
+    <circle cx="778" cy="388" r="2.5" fill="#562235" />
+    <circle cx="778" cy="401" r="2.5" fill="#562235" />
+
+    <!-- Book 11 Dark Teal -->
+    <rect x="797" y="340" width="24" height="110" rx="2" fill="#2E7E7A" />
+
+    <!-- Book 12 Dusty Pink -->
+    <rect x="824" y="360" width="20" height="90" rx="2" fill="#D87888" />
+
+    <!-- Book 13 Turquoise with Band -->
+    <rect x="847" y="335" width="34" height="115" rx="2" fill="#32847F" />
+    <rect x="847" y="370" width="34" height="12" fill="#D87888" />
+
+    <!-- Book 14 Olive Green -->
+    <rect x="884" y="342" width="22" height="108" rx="2" fill="#466E3E" />
+
+    <!-- Book 15 Tall Teal with 3 Bands -->
+    <rect x="909" y="330" width="32" height="120" rx="2" fill="#2B7773" />
+    <line x1="912" y1="350" x2="938" y2="350" stroke="#DFAC37" stroke-width="2" />
+    <line x1="912" y1="358" x2="938" y2="358" stroke="#DFAC37" stroke-width="2" />
+    <line x1="912" y1="366" x2="938" y2="366" stroke="#DFAC37" stroke-width="2" />
+
+    <!-- Book 16 Coral Pink with Diamond -->
+    <rect x="944" y="340" width="26" height="110" rx="2" fill="#CC6442" />
+    <polygon points="957,365 962,372 957,379 952,372" fill="#DFAC37" />
+  </g>
+
+  <!-- SHELF 3 WOOD PLANK -->
+  <g id="shelf3-plank" filter="url(#shelfShadow)">
+    <rect x="420" y="450" width="540" height="6" fill="url(#shelfTopGrad)" />
+    <rect x="420" y="456" width="540" height="12" fill="url(#shelfFrontGrad)" />
+  </g>
+
+
+  <!-- ==========================================
+       SHELF 4 BOOKS (y: 475 to 600)
+       ========================================== -->
+  <g id="shelf4-books">
+    <!-- Book 1 Teal -->
+    <rect x="285" y="500" width="28" height="100" rx="2" fill="#2E7E7A" />
+
+    <!-- Book 2 Dusty Rose -->
+    <rect x="316" y="520" width="20" height="80" rx="2" fill="#D37E8C" />
+
+    <!-- Book 3 Teal with Gold -->
+    <rect x="339" y="485" width="36" height="115" rx="2" fill="#2C7975" />
+    <line x1="343" y1="505" x2="371" y2="505" stroke="#DFAC37" stroke-width="2" />
+
+    <!-- Book 4 Olive Green -->
+    <rect x="378" y="505" width="24" height="95" rx="2" fill="#466E3E" />
+
+    <!-- Book 5 Leaning Plum -->
+    <g transform="rotate(-15, 404, 600)">
+      <rect x="404" y="490" width="26" height="110" rx="2" fill="#562235" />
+    </g>
+
+    <!-- Book 6 Dusty Rose -->
+    <rect x="435" y="480" width="20" height="120" rx="2" fill="#D37E8C" />
+
+    <!-- Book 7 Gold Orange -->
+    <rect x="458" y="475" width="34" height="125" rx="2" fill="#E2A236" />
+    <line x1="462" y1="495" x2="488" y2="495" stroke="#7A4D07" stroke-width="2" />
+    <line x1="462" y1="580" x2="488" y2="580" stroke="#7A4D07" stroke-width="2" />
+
+    <!-- Book 8 Teal -->
+    <rect x="495" y="510" width="22" height="90" rx="2" fill="#2E7E7A" />
+
+    <!-- Book 9 Dusty Pink -->
+    <rect x="520" y="490" width="34" height="110" rx="2" fill="#D87888" />
+    <circle cx="537" cy="525" r="4" fill="#FFFFFF" opacity="0.8" />
+
+    <!-- Book 10 Mustard Yellow with Circles -->
+    <rect x="557" y="500" width="30" height="100" rx="2" fill="#DA9834" />
+    <circle cx="572" cy="530" r="3" fill="#7A4D07" />
+    <circle cx="572" cy="545" r="3" fill="#7A4D07" />
+
+    <!-- Book 11 Forest Green -->
+    <rect x="590" y="485" width="28" height="115" rx="2" fill="#486E3F" />
+
+    <!-- Book 12 Wine Red -->
+    <rect x="621" y="475" width="26" height="125" rx="2" fill="#B84438" />
+
+    <!-- Books 13-15 HORIZONTAL BOOK STACK -->
+    <!-- Bottom stacked book (Coral) -->
+    <rect x="664" y="582" width="144" height="18" rx="2" fill="#E26A38" />
+    <rect x="690" y="586" width="90" height="10" fill="#FFE1B3" rx="1" />
+    <!-- Middle stacked book (Olive) -->
+    <rect x="676" y="562" width="130" height="18" rx="2" fill="#466E3E" />
+    <line x1="685" y1="571" x2="795" y2="571" stroke="#DFAC37" stroke-width="2" />
+    <!-- Top stacked book (Dusty Rose) -->
+    <rect x="692" y="542" width="112" height="18" rx="2" fill="#D67888" />
+    <line x1="702" y1="551" x2="792" y2="551" stroke="#FFFFFF" stroke-width="1.5" opacity="0.7" />
+
+    <!-- Leaning Plum Book against the stack -->
+    <g transform="rotate(-18, 808, 600)">
+      <rect x="808" y="480" width="26" height="120" rx="2" fill="#562235" />
+      <line x1="812" y1="505" x2="830" y2="505" stroke="#DFAC37" stroke-width="2" />
+    </g>
+
+    <!-- Book 16 Pink -->
+    <rect x="844" y="480" width="20" height="120" rx="2" fill="#D37E8C" />
+
+    <!-- Book 17 Golden Yellow -->
+    <rect x="867" y="475" width="34" height="125" rx="2" fill="#E2A236" />
+    <circle cx="884" cy="510" r="5" fill="#7A4D07" />
+
+    <!-- Book 18 Teal -->
+    <rect x="904" y="490" width="22" height="110" rx="2" fill="#2E7E7A" />
+
+    <!-- Book 19 Dark Teal with Circle -->
+    <rect x="929" y="485" width="32" height="115" rx="2" fill="#28736F" />
+    <circle cx="945" cy="525" r="5" fill="#DFAC37" />
+  </g>
+
+  <!-- SHELF 4 WOOD PLANK -->
+  <g id="shelf4-plank" filter="url(#shelfShadow)">
+    <rect x="250" y="600" width="710" height="6" fill="url(#shelfTopGrad)" />
+    <rect x="250" y="606" width="710" height="14" fill="url(#shelfFrontGrad)" />
+  </g>
+
+
+  <!-- ==========================================
+       THE SIGNATURE FLUID CREAM WAVE CUTOUT MASK
+       Exact Bezier Curve matching the reference image!
+       ========================================== -->
+  <path d="
+    M 0 0 
+    L 820 0 
+    C 810 50, 485 65, 450 120 
+    C 425 160, 480 185, 620 185 
+    C 655 185, 655 220, 620 220 
+    C 505 220, 460 238, 460 275 
+    C 460 310, 520 325, 640 325 
+    C 675 325, 675 365, 640 365 
+    C 505 365, 460 385, 460 425 
+    C 460 460, 505 478, 595 478 
+    C 625 478, 625 515, 595 515 
+    C 430 515, 320 550, 270 620 
+    L 0 620 Z
+  " fill="#FAF8F4" />
+
+  <!-- CIRCLE CUTOUT 1 (floating above middle shelf) -->
+  <circle cx="560" cy="148" r="22" fill="#FAF8F4" />
+
+  <!-- CIRCLE CUTOUT 2 (floating in bottom curve) -->
+  <circle cx="360" cy="505" r="30" fill="#FAF8F4" />
+
+</svg>
