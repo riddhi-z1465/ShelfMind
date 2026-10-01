@@ -7,52 +7,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
-  /* Primary Enterprise Palette */
-  --navy-deep: #0B1F33;
-  --navy-blue: #123B5D;
-  --blue: #2563EB;
-  --blue-hover: #1D4ED8;
+  /* Warm Editorial Library Palette */
+  --navy-deep: #142E2B;        /* Deep dark forest teal for sidebar */
+  --navy-blue: #1D433F;        /* Sidebar active item / dark teal highlight */
+  --blue: #C86A10;             /* Warm cognac amber for primary action & buttons */
+  --blue-hover: #AF5807;       /* Hover state for primary amber */
 
   /* Supporting Tones */
-  --soft-blue: #EAF2FF;
-  --blue-border: #BFDBFE;
-  --teal: #0F766E;
-  --teal-hover: #0d655e;
-  --soft-teal: #E6F7F5;
-  --teal-border: #99F6E4;
+  --soft-blue: #FBF1E6;        /* Warm amber soft background */
+  --blue-border: #F0D5BE;       /* Warm amber border */
+  --teal: #1B544E;             /* Deep academic forest teal */
+  --teal-hover: #14423D;
+  --soft-teal: #EAF2F0;        /* Soft sage-teal background */
+  --teal-border: #D1E3E0;
 
-  /* Neutral Surface Palette */
-  --bg-page: #F6F8FB;
-  --bg-surface: #FFFFFF;
-  --bg-subtle: #F1F5F9;
-  --border: #E2E8F0;
-  --border-strong: #CBD5E1;
+  /* Neutral Surface Palette (Warm Ivory / Editorial Linen) */
+  --bg-page: #FAF8F4;          /* Warm ivory canvas */
+  --bg-surface: #FFFFFF;       /* Pure white card surface */
+  --bg-subtle: #F4EFE6;        /* Soft linen background */
+  --border: #E8E2D6;           /* Warm soft border */
+  --border-strong: #D5CDC0;     /* Warm defined border */
 
   /* Typography Colors */
-  --text-primary: #172033;
-  --text-secondary: #64748B;
-  --text-muted: #94A3B8;
+  --text-primary: #172E2B;     /* Deep slate-teal text */
+  --text-secondary: #556D69;   /* Warm muted slate-sage */
+  --text-muted: #889E9B;       /* Warm subtle caption */
 
   /* Status Colors */
-  --success: #10B981;
-  --success-bg: #ECFDF5;
-  --success-text: #065F46;
-  --success-border: #A7F3D0;
+  --success: #15803D;          /* Warm forest green */
+  --success-bg: #EDF7F0;
+  --success-text: #166534;
+  --success-border: #BBF7D0;
 
-  --warning: #F59E0B;
-  --warning-bg: #FFFBEB;
+  --warning: #D97706;          /* Warm amber */
+  --warning-bg: #FEF3C7;
   --warning-text: #92400E;
   --warning-border: #FDE68A;
 
-  --error: #EF4444;
+  --error: #DC2626;            /* Warm crimson */
   --error-bg: #FEF2F2;
   --error-text: #991B1B;
   --error-border: #FECACA;
 
-  --info: #2563EB;
-  --info-bg: #EAF2FF;
-  --info-text: #1E40AF;
-  --info-border: #BFDBFE;
+  --info: #1B544E;             /* Academic teal */
+  --info-bg: #EAF2F0;
+  --info-text: #164641;
+  --info-border: #D1E3E0;
 
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -142,13 +142,13 @@ a:hover {
 .brand-icon {
   width: 36px;
   height: 36px;
-  background-color: var(--navy-blue);
+  background-color: var(--blue);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #38BDF8;
+  color: #FFFFFF;
   flex-shrink: 0;
 }
 
@@ -164,7 +164,7 @@ a:hover {
 .brand-subtitle {
   font-size: 11px;
   font-weight: 500;
-  color: var(--text-muted);
+  color: #8CA8A3;
   letter-spacing: 0.04em;
   display: block;
 }
@@ -188,7 +188,7 @@ a:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #728299;
+  color: #7A9994;
   padding: 12px 12px 6px;
 }
 
@@ -206,7 +206,7 @@ a:hover {
   align-items: center;
   gap: 11px;
   padding: 8px 12px;
-  color: #CBD5E1;
+  color: #C6DCD8;
   font-size: 13px;
   font-weight: 500;
   border-radius: var(--radius-sm);
@@ -218,18 +218,18 @@ a:hover {
   width: 17px;
   height: 17px;
   stroke-width: 1.8;
-  color: #8194AB;
+  color: #8BA7A2;
   flex-shrink: 0;
   transition: color 0.15s ease, transform 0.15s ease;
 }
 
 .sidebar-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: rgba(255, 255, 255, 0.08);
   color: #FFFFFF;
   text-decoration: none;
 }
 .sidebar-nav a:hover svg {
-  color: #60A5FA;
+  color: #E2A25B;
 }
 
 .sidebar-nav a.active {
@@ -237,23 +237,23 @@ a:hover {
   color: #FFFFFF;
   border-left-color: var(--blue);
   font-weight: 600;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 .sidebar-nav a.active svg {
-  color: #60A5FA;
+  color: #E2A25B;
 }
 
 .sidebar-footer {
   padding: 14px 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  background-color: #071524;
+  background-color: #0E211F;
 }
 
 .rfid-status-badge {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(18, 59, 93, 0.45);
+  background-color: rgba(29, 67, 63, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 9px 12px;
   border-radius: var(--radius-sm);
@@ -262,14 +262,14 @@ a:hover {
 
 .rfid-label {
   font-size: 10px;
-  color: #8899AC;
+  color: #8CA8A3;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.05em;
   display: block;
 }
 .rfid-name {
-  color: #E2E8F0;
+  color: #E2ECE9;
   font-weight: 600;
   display: block;
 }
@@ -800,7 +800,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #FAFBFC;
+  background-color: #FAF7F2;
 }
 
 .card-title {
@@ -824,7 +824,7 @@ a:hover {
 
 .card-footer {
   padding: 12px 20px;
-  background-color: #FAFBFC;
+  background-color: #FAF7F2;
   border-top: 1px solid var(--border);
   font-size: 12px;
   color: var(--text-secondary);
@@ -886,8 +886,8 @@ a:hover {
   background-color: #FFFEFA;
 }
 .attention-card.info {
-  border-left-color: var(--blue);
-  background-color: #FAFCFF;
+  border-left-color: var(--teal);
+  background-color: #F8FBFB;
 }
 
 .attention-card:hover {
@@ -1004,7 +1004,7 @@ a:hover {
 }
 
 .data-table th {
-  background-color: #F8FAFC;
+  background-color: #F4EFE6;
   color: var(--text-secondary);
   font-weight: 600;
   padding: 10px 14px;
@@ -1023,7 +1023,7 @@ a:hover {
 }
 
 .data-table tr:hover td {
-  background-color: #F8FAFC;
+  background-color: #FAF7F2;
 }
 
 .font-mono {
@@ -1422,14 +1422,14 @@ a:hover {
   border-radius: var(--radius-md);
   padding: 32px 20px;
   text-align: center;
-  background-color: #FAFBFC;
+  background-color: #FAF7F2;
   transition: all 0.2s ease;
   position: relative;
 }
 
 .rfid-scanner-zone.scanning {
-  border-color: var(--blue);
-  background-color: var(--soft-blue);
+  border-color: var(--teal);
+  background-color: var(--soft-teal);
 }
 
 .rfid-icon-container {
@@ -1472,7 +1472,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  background-color: #FAFBFC;
+  background-color: #FAF7F2;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 10px 16px;
@@ -1555,7 +1555,7 @@ a:hover {
 
 /* Concurrency Demonstration Card */
 .race-condition-box {
-  background-color: #F8FAFC;
+  background-color: #FAF7F2;
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
   padding: 16px;
