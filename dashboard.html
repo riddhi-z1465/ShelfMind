@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ShelfMind Library Automation Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Fixed Production Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="brand-link">
+          <div class="brand-icon">
+            <!-- RFID Waves + Book Mark Icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              <path d="M12 6v6"></path>
+              <path d="M9 9h6"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="brand-title">ShelfMind</span>
+            <span class="brand-subtitle">RFID Library System</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="sidebar-content">
+        <div class="nav-section-title">Overview</div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="dashboard.html" class="active">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              <span>Dashboard</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-title">Library</div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="books.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span>Books</span>
+            </a>
+          </li>
+          <li>
+            <a href="issue-return.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+              <span>Issue & Return</span>
+            </a>
+          </li>
+          <li>
+            <a href="reservations.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Reservations</span>
+            </a>
+          </li>
+          <li>
+            <a href="digital-library.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              <span>Digital Library</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-title">Operations</div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="stock-verification.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              <span>Stock Verification</span>
+            </a>
+          </li>
+          <li>
+            <a href="gate-security.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>Gate Security</span>
+            </a>
+          </li>
+          <li>
+            <a href="fines.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>Fines</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-title">Management</div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="users.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <span>Users</span>
+            </a>
+          </li>
+          <li>
+            <a href="reports.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              <span>Reports</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-title">System</div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="#" onclick="openModal('systemSettingsModal'); return false;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="rfid-status-badge">
+          <div>
+            <span class="rfid-label">RFID SYSTEM</span>
+            <span class="rfid-name">Operational</span>
+          </div>
+          <span class="status-dot pulse-green"></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+      <!-- Premium Top Navigation -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          
+          <nav class="breadcrumbs">
+            <span class="breadcrumb-item">Library</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-active">Dashboard</span>
+          </nav>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Quick Search Button (⌘ K) -->
+          <div class="quick-search-trigger" id="quickSearchBtn" title="Press ⌘ K to search actions">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Quick Actions</span>
+            <span class="kbd-shortcut">⌘ K</span>
+          </div>
+
+          <!-- RFID Status Indicator -->
+          <div class="rfid-online-pill">
+            <span class="status-dot pulse-green"></span>
+            <span>RFID SYSTEM ● ONLINE</span>
+          </div>
+
+          <!-- Notifications Button -->
+          <button type="button" class="topbar-icon-btn" onclick="showToast('Notification: 4,100 books flagged in annual stock verification cycle.', 'info')" title="Notifications">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="badge-dot"></span>
+          </button>
+
+          <!-- Help Button -->
+          <button type="button" class="topbar-icon-btn" onclick="openModal('systemHelpModal')" title="System Documentation & Specifications">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </button>
+
+          <!-- User Profile Dropdown -->
+          <div class="user-menu-wrapper">
+            <div class="user-profile-menu" id="userProfileMenuTrigger">
+              <div class="user-avatar">SM</div>
+              <div class="user-details">
+                <span class="user-name" id="currentUserName">Librarian Murthy</span>
+                <span class="user-role" id="currentUserRole">Chief Librarian</span>
+              </div>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted);">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+
+            <!-- Profile Dropdown Menu -->
+            <div class="dropdown-menu" id="userDropdownMenu">
+              <a href="#" class="dropdown-item" onclick="alert('Patron Profile: S. N. Murthy (Chief Librarian)\nDepartment: Central University Library'); return false;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <span>Profile</span>
+              </a>
+              <a href="#" class="dropdown-item" onclick="openModal('systemSettingsModal'); return false;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                <span>Account Settings</span>
+              </a>
+              <a href="gate-security.html" class="dropdown-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <span>Activity Log</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="login.html" class="dropdown-item" style="color:var(--error);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                <span>Sign Out</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <main class="page-container">
+        <!-- Dashboard Header -->
+        <div class="page-header">
+          <div class="page-title-group">
+            <h1>Good morning, Librarian</h1>
+            <p>Here's what's happening across your library today.</p>
+          </div>
+          <div class="header-actions">
+            <div class="sync-status-indicator">
+              <span id="lastSyncText">Last synchronized 2 minutes ago</span>
+              <button type="button" class="btn-refresh" id="btnSyncData" onclick="triggerGlobalSync()" title="Synchronize with RFID broker">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+              </button>
+            </div>
+            <a href="issue-return.html" class="btn btn-primary btn-sm">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path></svg>
+              Issue / Return
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Distinct Key Metric Cards (Prompt Section 5) -->
+        <div class="metrics-grid">
+          <!-- Card 1: Total Volumes -->
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-label">Total Volumes</span>
+              <div class="metric-card-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+            </div>
+            <div class="metric-value" id="statTotalVolumes">340,000</div>
+            <div class="metric-footnote">
+              <span class="metric-tag blue">100% RFID Tagged</span>
+              <span>Central & Stacks</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Untraceable Books -->
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-label">Untraceable Books</span>
+              <div class="metric-card-icon amber">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              </div>
+            </div>
+            <div class="metric-value" id="statUntraceable" style="color: var(--warning-text);">4,100</div>
+            <div class="metric-footnote">
+              <span class="metric-tag warning">Needs investigation</span>
+              <span>1.2% loss threshold</span>
+            </div>
+          </div>
+
+          <!-- Card 3: E-Book Licences -->
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-label">E-Book Licences</span>
+              <div class="metric-card-icon teal">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </div>
+            </div>
+            <div class="metric-value" id="statActiveLicences">4 / 5 Active</div>
+            <div class="metric-footnote">
+              <span class="metric-tag success">1 Slot Available</span>
+              <span>Controlled Lending</span>
+            </div>
+          </div>
+
+          <!-- Card 4: RFID Handhelds -->
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-label">RFID Handhelds</span>
+              <div class="metric-card-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>
+              </div>
+            </div>
+            <div class="metric-value" id="statHandhelds">6 Online</div>
+            <div class="metric-footnote">
+              <span class="metric-tag success">● All devices operational</span>
+              <span>180 tags/min/dev</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Smart Operational Panels: "Attention Required" (Prompt Section 8) -->
+        <div style="margin-bottom: 24px;">
+          <div style="font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--warning);"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            Attention Required
+          </div>
+
+          <div class="attention-grid">
+            <div class="attention-card error">
+              <div class="attention-left">
+                <span class="attention-count" style="color:var(--error);">4,100</span>
+                <span class="attention-desc">Books require verification audit</span>
+              </div>
+              <a href="stock-verification.html" class="btn btn-secondary btn-sm">Review</a>
+            </div>
+
+            <div class="attention-card warning">
+              <div class="attention-left">
+                <span class="attention-count" style="color:var(--warning-text);">1 Licence</span>
+                <span class="attention-desc">E-book capacity remaining</span>
+              </div>
+              <a href="digital-library.html" class="btn btn-secondary btn-sm">Monitor</a>
+            </div>
+
+            <div class="attention-card warning">
+              <div class="attention-left">
+                <span class="attention-count" style="color:var(--warning-text);">12 Overdue</span>
+                <span class="attention-desc">Circulation return deadlines past</span>
+              </div>
+              <a href="fines.html" class="btn btn-secondary btn-sm">View Fines</a>
+            </div>
+
+            <div class="attention-card info">
+              <div class="attention-left">
+                <span class="attention-count" style="color:var(--blue);">3 Alerts</span>
+                <span class="attention-desc">Gate security passes logged</span>
+              </div>
+              <a href="gate-security.html" class="btn btn-secondary btn-sm">Inspect Gate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 6: Library Operations Overview Widgets -->
+        <div class="grid-2col" style="margin-bottom: 24px;">
+          <!-- Widget 1: RFID Verification Overview -->
+          <div class="card" style="margin-bottom: 0;">
+            <div class="card-header">
+              <h2 class="card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                RFID Stock Verification
+              </h2>
+              <span class="badge badge-available">
+                <span class="status-dot pulse-green"></span>
+                Ready
+              </span>
+            </div>
+
+            <div class="card-body">
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center; margin-bottom: 14px;">
+                <div style="background-color: var(--bg-subtle); padding: 10px 8px; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                  <div style="font-size: 16px; font-weight: 700; color: var(--text-primary);">340,000</div>
+                  <div style="font-size: 10.5px; color: var(--text-secondary); text-transform: uppercase;">Total Tags</div>
+                </div>
+                <div style="background-color: var(--bg-subtle); padding: 10px 8px; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                  <div style="font-size: 16px; font-weight: 700; color: var(--text-primary);">6</div>
+                  <div style="font-size: 10.5px; color: var(--text-secondary); text-transform: uppercase;">Handhelds</div>
+                </div>
+                <div style="background-color: var(--bg-subtle); padding: 10px 8px; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                  <div style="font-size: 16px; font-weight: 700; color: var(--text-primary);">180</div>
+                  <div style="font-size: 10.5px; color: var(--text-secondary); text-transform: uppercase;">Tags/Min/Dev</div>
+                </div>
+              </div>
+
+              <!-- Estimated Reading Time -->
+              <div style="background-color: var(--soft-blue); border: 1px solid var(--blue-border); border-radius: var(--radius-sm); padding: 10px 14px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 12px; font-weight: 600; color: var(--blue);">Estimated Reading Time</span>
+                <span style="font-size: 16px; font-weight: 700; color: var(--text-primary);">5h 15m</span>
+              </div>
+
+              <!-- Horizontal Progress Visualization -->
+              <div style="margin-bottom: 12px;">
+                <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 600;">
+                  <span>Verification Progress</span>
+                  <span id="stockProgressText">Ready</span>
+                </div>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar-fill" id="stockProgressFill"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-secondary);">
+                  <span id="stockScanCounter">0 / 340,000</span>
+                  <span id="stockMissingCounter" style="color:var(--error);">0 flagged</span>
+                </div>
+              </div>
+
+              <div id="stockStatusNote" style="font-size: 12px; color: var(--text-secondary); min-height: 20px;">
+                Click below to start simulated 340,000 tag audit sweep across 6 handhelds.
+              </div>
+
+              <div id="stockVerificationSummary" style="display: none;"></div>
+
+              <button type="button" class="btn btn-teal btn-sm" id="btnStartQuickStockScan" style="width: 100%; margin-top: 14px;">
+                Start Stock Verification
+              </button>
+            </div>
+          </div>
+
+          <!-- Widget 2: E-Book Licensing Capacity Monitor -->
+          <div class="card" style="margin-bottom: 0;">
+            <div class="card-header">
+              <h2 class="card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                E-Book Concurrent Licensing
+              </h2>
+              <div style="text-align: right;">
+                <div id="dashLicenceDotBar" class="licence-dot-bar">● ● ● ● ○</div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px;">
+                <span style="font-size: 13px; font-weight: 700; color: var(--text-primary);">4 / 5 licences active</span>
+                <span class="badge badge-available">Controlled Lending</span>
+              </div>
+
+              <!-- Active Licence List -->
+              <div id="dashLicenceActiveList">
+                <!-- Dynamically populated by dashboard.js -->
+              </div>
+
+              <div style="margin-top: 14px; display: flex; gap: 8px;">
+                <a href="digital-library.html" class="btn btn-secondary btn-sm" style="flex:1;">View Digital Library</a>
+                <button type="button" class="btn btn-primary btn-sm" onclick="location.href='digital-library.html#raceDemoSection'">Test Concurrency</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-Column: Activity Timeline (Prompt Section 7) & Circulation Telemetry -->
+        <div class="grid-2-1">
+          <!-- Activity Timeline (Prompt Section 7) -->
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="12 6 12 12 14 14"></polyline><circle cx="12" cy="12" r="10"></circle></svg>
+                Activity Timeline
+              </h2>
+              <span class="badge badge-issued">Live Stream</span>
+            </div>
+
+            <div class="card-body">
+              <ul class="timeline-list">
+                <li class="timeline-item">
+                  <div class="timeline-icon green">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <div class="timeline-content">
+                    <div>
+                      <div class="timeline-title">RFID scan completed</div>
+                      <div class="timeline-sub">Handheld #04 (Stack G & H) — 2,840 tags read</div>
+                    </div>
+                    <span class="timeline-time">10:42 AM</span>
+                  </div>
+                </li>
+
+                <li class="timeline-item">
+                  <div class="timeline-icon">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="7 23 3 19 7 15"></polyline></svg>
+                  </div>
+                  <div class="timeline-content">
+                    <div>
+                      <div class="timeline-title">Book returned via Smart Chute</div>
+                      <div class="timeline-sub">Clean Code — ISBN 978-0132350884 (EAS Re-Armed)</div>
+                    </div>
+                    <span class="timeline-time">10:37 AM</span>
+                  </div>
+                </li>
+
+                <li class="timeline-item">
+                  <div class="timeline-icon">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect></svg>
+                  </div>
+                  <div class="timeline-content">
+                    <div>
+                      <div class="timeline-title">E-book licence allocated</div>
+                      <div class="timeline-sub">Database System Concepts (Korth) — Slot 02</div>
+                    </div>
+                    <span class="timeline-time">10:21 AM</span>
+                  </div>
+                </li>
+
+                <li class="timeline-item">
+                  <div class="timeline-icon amber">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"></circle></svg>
+                  </div>
+                  <div class="timeline-content">
+                    <div>
+                      <div class="timeline-title">Reservation hold created</div>
+                      <div class="timeline-sub">Artificial Intelligence: A Modern Approach (Russell & Norvig)</div>
+                    </div>
+                    <span class="timeline-time">09:56 AM</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Secondary Circulation Summary -->
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title">Today's Circulation</h2>
+            </div>
+            <div class="card-body">
+              <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--border);">
+                <span style="color:var(--text-secondary);">Books Issued Today</span>
+                <strong id="statIssuedToday" style="font-size:15px; color:var(--text-primary);">142</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--border);">
+                <span style="color:var(--text-secondary);">Books Returned Today</span>
+                <strong id="statReturnedToday" style="font-size:15px; color:var(--text-primary);">118</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--border);">
+                <span style="color:var(--text-secondary);">Active Hold Queues</span>
+                <strong id="statActiveReservations" style="font-size:15px; color:var(--text-primary);">29</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; padding:10px 0;">
+                <span style="color:var(--text-secondary);">Pending Overdue Fines</span>
+                <strong id="statPendingFines" style="font-size:15px; color:var(--warning-text);">₹1,840</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- System Settings Modal -->
+  <div class="modal-overlay" id="systemSettingsModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 class="modal-title">System Circulation Parameters</h2>
+        <button type="button" class="modal-close-btn" onclick="closeModal('systemSettingsModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Physical Book Loan Period</label>
+          <input type="text" class="form-control" value="14 Days" readonly>
+          <div class="form-help">Standard university borrowing bye-law duration.</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Digital E-Book Idle Timeout</label>
+          <input type="text" class="form-control" value="20 Minutes" readonly>
+          <div class="form-help">Inactivity period after which token returns to concurrent pool.</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Daily Overdue Assessment Rate</label>
+          <input type="text" class="form-control" value="₹5.00 / day" readonly>
+        </div>
+        <div class="form-group">
+          <label class="form-label">RFID Handheld Target Throughput</label>
+          <input type="text" class="form-control" value="180 tags/minute/device" readonly>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" onclick="closeModal('systemSettingsModal')">Close</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="showToast('Settings saved to institutional registry.', 'success'); closeModal('systemSettingsModal');">Save Parameters</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- System Help Modal -->
+  <div class="modal-overlay" id="systemHelpModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 class="modal-title">ShelfMind System Architecture</h2>
+        <button type="button" class="modal-close-btn" onclick="closeModal('systemHelpModal')">&times;</button>
+      </div>
+      <div class="modal-body" style="font-size:13px; color:var(--text-secondary); line-height:1.6;">
+        <p><strong>Hardware Layer:</strong> ISO 15693 13.56 MHz HF (Self-service pads & gate pedestals) and UHF EPC Gen2 (6 Handheld sweep readers).</p>
+        <p style="margin-top:8px;"><strong>Concurrency Engine:</strong> Atomic test-and-set token arbitration guaranteeing $\le 5$ simultaneous digital readings with a 20-minute idle watchdog.</p>
+        <p style="margin-top:8px;"><strong>Academic Project Scope:</strong> 15 KLOC, B.Tech CSE Software Engineering & Project Management.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-sm" onclick="closeModal('systemHelpModal')">Dismiss</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/mock-data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShelfMind | Modern RFID Library Automation & Digital Lending Platform</title>
+  <meta name="description" content="Production-ready academic library automation platform combining high-frequency RFID circulation, 340K-volume stock verification, and controlled concurrent digital lending.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Enterprise Navigation -->
+  <header class="landing-nav">
+    <div class="landing-nav-inner">
+      <a href="index.html" class="brand-link">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <div>
+          <span class="brand-title">ShelfMind</span>
+          <span class="brand-subtitle">RFID Library System</span>
+        </div>
+      </a>
+
+      <nav class="landing-nav-links">
+        <a href="#overview" class="landing-nav-link">Overview</a>
+        <a href="#features" class="landing-nav-link">Core Modules</a>
+        <a href="#architecture" class="landing-nav-link">How It Works</a>
+        <a href="#specifications" class="landing-nav-link">Specifications</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span class="rfid-online-pill" style="margin-right: 4px;">
+          <span class="status-dot"></span>
+          <span>RFID OPERATIONAL</span>
+        </span>
+        <button class="quick-search-trigger" onclick="openCommandPalette()" title="Press ⌘ K to search" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: #94A3B8;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span style="font-size: 11.5px;">Search</span>
+          <span class="kbd-badge" style="background: rgba(255,255,255,0.1); color: #E2E8F0; border-color: rgba(255,255,255,0.2);">⌘K</span>
+        </button>
+        <a href="login.html" class="btn btn-secondary btn-sm" style="background: transparent; color: #E2E8F0; border-color: rgba(255,255,255,0.2);">Sign In</a>
+        <a href="dashboard.html" class="btn btn-primary btn-sm" id="navOpenDashboard">Open Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="landing-hero" id="overview">
+    <div class="landing-hero-container">
+      <div>
+        <div class="hero-badge">
+          <span class="status-dot" style="background-color: #38BDF8;"></span>
+          <span>B.Tech CSE Project • Software Engineering & Project Management</span>
+        </div>
+        <h1 class="hero-title">
+          Library automation,<br>without the manual overhead.
+        </h1>
+        <p class="hero-subtitle">
+          ShelfMind combines RFID automation, inventory verification and controlled digital lending in one platform.
+        </p>
+
+        <div class="hero-actions">
+          <a href="dashboard.html" class="btn btn-primary btn-lg" id="btnOpenDashboard" style="padding: 12px 24px; font-size: 15px;">
+            Open Dashboard
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#architecture" class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.06); color: #FFFFFF; border-color: rgba(255,255,255,0.2); padding: 12px 22px; font-size: 15px;">
+            Explore System
+          </a>
+        </div>
+
+        <div class="hero-specs-note">
+          <span style="display: flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            ISO 15693 / 18000-3 Compliant
+          </span>
+          <span>•</span>
+          <span style="display: flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Atomic Licence Mutex
+          </span>
+          <span>•</span>
+          <span>15 KLOC Codebase</span>
+        </div>
+      </div>
+
+      <!-- Realistic Abstract RFID / Operations Visualization Console -->
+      <div class="hero-viz-console">
+        <div class="hero-viz-header">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span class="status-dot"></span>
+            <span style="font-weight: 600; color: #FFFFFF;">SHELMIND-CORE-STATION</span>
+          </div>
+          <span style="font-family: var(--font-mono);">HOST: 192.168.1.104</span>
+        </div>
+
+        <div class="hero-telemetry-grid">
+          <div class="hero-telemetry-box">
+            <div class="hero-telemetry-label">RFID Handhelds</div>
+            <div class="hero-telemetry-val">
+              6 / 6
+              <span class="hero-telemetry-sub">Online</span>
+            </div>
+          </div>
+          <div class="hero-telemetry-box">
+            <div class="hero-telemetry-label">Concurrency Pool</div>
+            <div class="hero-telemetry-val">
+              4 / 5
+              <span class="hero-telemetry-sub">Active</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Abstract RFID Transceiver Nodes -->
+        <div class="rfid-wave-graphic">
+          <div class="rfid-wave-header">
+            <span>UHF INTERROGATION & EAS BIT BITMAP</span>
+            <span style="color: #38BDF8; font-weight: 600;">865.6–867.6 MHz</span>
+          </div>
+          <div class="rfid-node-track">
+            <div class="rfid-node-connector"></div>
+            <div class="rfid-node-item">
+              <div class="rfid-node-circle active">H-01</div>
+              <span style="font-size: 10px; color: #94A3B8;">180/m</span>
+            </div>
+            <div class="rfid-node-item">
+              <div class="rfid-node-circle active">H-02</div>
+              <span style="font-size: 10px; color: #94A3B8;">180/m</span>
+            </div>
+            <div class="rfid-node-item">
+              <div class="rfid-node-circle active">H-03</div>
+              <span style="font-size: 10px; color: #94A3B8;">180/m</span>
+            </div>
+            <div class="rfid-node-item">
+              <div class="rfid-node-circle teal">GATE</div>
+              <span style="font-size: 10px; color: #2DD4BF;">EAS ON</span>
+            </div>
+            <div class="rfid-node-item">
+              <div class="rfid-node-circle" style="border-color: #F59E0B; color: #F59E0B; background-color: #261B0B;">CDL</div>
+              <span style="font-size: 10px; color: #F59E0B;">1 FREE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Realtime Live Event Feed -->
+        <div class="hero-feed-log">
+          <div><span style="color:#64748B;">[10:44:12]</span> <span style="color:#38BDF8;">TAG_POLL</span>: Handheld #04 bulk swept 180 tags (Stack 04-B)</div>
+          <div><span style="color:#64748B;">[10:43:55]</span> <span style="color:#10B981;">EAS_DISARM</span>: Patron 2024-CSE-088 issued "Clean Code"</div>
+          <div><span style="color:#64748B;">[10:42:19]</span> <span style="color:#F59E0B;">CDL_MUTEX</span>: Licence #04 locked for "Database Systems"</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Metrics Counter Bar -->
+  <div class="landing-metrics-strip">
+    <div class="metrics-strip-container">
+      <div class="metric-strip-card">
+        <div class="metric-strip-num">340,000</div>
+        <div class="metric-strip-label">340K Volumes</div>
+        <div class="metric-strip-sub">Total RFID tagged university holdings</div>
+      </div>
+      <div class="metric-strip-card">
+        <div class="metric-strip-num" style="color: var(--warning-text);">4,100</div>
+        <div class="metric-strip-label">4.1K Untraceable</div>
+        <div class="metric-strip-sub">Flagged for handheld audit reconciliation</div>
+      </div>
+      <div class="metric-strip-card">
+        <div class="metric-strip-num" style="color: var(--teal);">6</div>
+        <div class="metric-strip-label">6 RFID Handhelds</div>
+        <div class="metric-strip-sub">180 tags/minute/device verification rate</div>
+      </div>
+      <div class="metric-strip-card">
+        <div class="metric-strip-num" style="color: var(--blue);">5</div>
+        <div class="metric-strip-label">5 E-book Licences</div>
+        <div class="metric-strip-sub">Strict 4/5 active concurrent allocation pool</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Modules / Feature Pillars -->
+  <section class="landing-section" id="features">
+    <div class="landing-section-header">
+      <span class="landing-section-badge">Platform Capabilities</span>
+      <h2 class="landing-section-title">Built for High-Density University Collections</h2>
+      <p class="landing-section-desc">
+        ShelfMind replaces labor-intensive barcode procedures with rapid RFID transceivers and controlled concurrent digital lending.
+      </p>
+    </div>
+
+    <div class="feature-pillars-grid">
+      <!-- Pillar 1 -->
+      <div class="feature-pillar-card">
+        <div class="pillar-icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"></path>
+            <line x1="2" y1="20" x2="2.01" y2="20"></line>
+          </svg>
+        </div>
+        <h3 class="pillar-title">RFID Self-Issue & Return</h3>
+        <p class="pillar-desc">
+          Automated patron self-checkout workstation with instant multi-tag scanning, Electronic Article Surveillance (EAS) security bit toggling, and 14-day loan deadlines.
+        </p>
+        <a href="issue-return.html" class="pillar-link">Circulation Workstation →</a>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="feature-pillar-card">
+        <div class="pillar-icon-box teal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <h3 class="pillar-title">Stock Verification</h3>
+        <p class="pillar-desc">
+          High-throughput inventory audits across 340,000 tagged volumes using 6 connected handheld readers at 180 tags/minute/device. Full sweep in ~5h 15m.
+        </p>
+        <a href="stock-verification.html" class="pillar-link">Audit Dashboard →</a>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="feature-pillar-card">
+        <div class="pillar-icon-box amber">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <h3 class="pillar-title">Controlled Digital Lending</h3>
+        <p class="pillar-desc">
+          Strict 5-slot concurrent digital licence pool with atomic test-and-set race condition protection and 20-minute idle session release watchdogs.
+        </p>
+        <a href="digital-library.html" class="pillar-link">Licence Concurrency Engine →</a>
+      </div>
+
+      <!-- Pillar 4 -->
+      <div class="feature-pillar-card">
+        <div class="pillar-icon-box red">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <h3 class="pillar-title">Pedestrian Gate Security</h3>
+        <p class="pillar-desc">
+          Dual-pedestal RFID perimeter portals detecting active EAS bits in under 40 milliseconds to intercept unauthorized book removals without physical barriers.
+        </p>
+        <a href="gate-security.html" class="pillar-link">Gate Surveillance Monitor →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visually Polished System Architecture Preview: "How ShelfMind Works" -->
+  <section class="landing-section alt-bg" id="architecture">
+    <div class="landing-section-header">
+      <span class="landing-section-badge">System Architecture</span>
+      <h2 class="landing-section-title">How ShelfMind Works</h2>
+      <p class="landing-section-desc">
+        End-to-end dual-pipeline operational model demonstrating physical RFID circulation and concurrent digital lending arbitration.
+      </p>
+    </div>
+
+    <div class="arch-preview-wrap">
+      <!-- Pipeline 1: Physical Book Circulation -->
+      <div class="arch-pipeline-card">
+        <div class="arch-pipeline-header">
+          <div class="arch-pipeline-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            Physical Book Circulation Pipeline
+          </div>
+          <span class="arch-pipeline-tag">ISO 15693 / UHF EAS</span>
+        </div>
+
+        <div class="arch-nodes-container">
+          <!-- Node 1 -->
+          <div class="arch-node-item">
+            <div class="arch-node-top">
+              <span class="arch-node-step">NODE 01</span>
+              <div class="arch-node-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </div>
+            </div>
+            <div class="arch-node-title">Student</div>
+            <div class="arch-node-desc">Patron taps institutional smartcard at workstation.</div>
+          </div>
+
+          <div class="arch-node-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+
+          <!-- Node 2 -->
+          <div class="arch-node-item">
+            <div class="arch-node-top">
+              <span class="arch-node-step">NODE 02</span>
+              <div class="arch-node-icon teal">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </div>
+            </div>
+            <div class="arch-node-title">Search Book</div>
+            <div class="arch-node-desc">Patron browses catalog via Title, Author, ISBN or Stack location.</div>
+          </div>
+
+          <div class="arch-node-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+
+          <!-- Node 3 -->
+          <div class="arch-node-item">
+            <div class="arch-node-top">
+              <span class="arch-node-step">NODE 03</span>
+              <div class="arch-node-icon amber">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect></svg>
+              </div>
+            </div>
+            <div class="arch-node-title">RFID Issue</div>
+            <div class="arch-node-desc">Antenna scans tag, sets loan period (14 days), disarms EAS bit.</div>
+          </div>
+
+          <div class="arch-node-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+
+          <!-- Node 4 -->
+          <div class="arch-node-item">
+            <div class="arch-node-top">
+              <span class="arch-node-step">NODE 04</span>
+              <div class="arch-node-icon green">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+            </div>
+            <div class="arch-node-title">Library Database</div>
+            <div class="arch-node-desc">Central ledger records active loan and patron account association.</div>
+          </div>
+
+          <div class="arch-node-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+
+          <!-- Node 5 -->
+          <div class="arch-node-item">
+            <div class="arch-node-top">
+              <span class="arch-node-step">NODE 05</span>
+              <div class="arch-node-icon" style="background-color: #FEF2F2; color: #EF4444;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+            </div>
+            <div class="arch-node-title">RFID Gate</div>
+            <div class="arch-node-desc">Exit portal queries EAS byte: disarmed passes, armed triggers alarm.</div>
+          </div>
+
+          <div class="arch-node-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+
+          <!-- Node 6 -->
+          <div class="arch-node-item">
+            <div class="arch-node-top">
+              <span class="arch-node-step">NODE 06</span>
+              <div class="arch-node-icon teal">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+              </div>
+            </div>
+            <div class="arch-node-title">Return</div>
+            <div class="arch-node-desc">Smart chute checks condition, rearms EAS, fulfills hold queue.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pipeline 2: Controlled Digital Lending -->
+      <div class="arch-pipeline-card">
+        <div class="arch-pipeline-header">
+          <div class="arch-pipeline-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            Controlled Digital Lending (CDL) Pipeline
+          </div>
+          <span class="arch-pipeline-tag" style="background-color: var(--soft-teal); color: var(--teal);">5-Slot Concurrent Mutex</span>
+        </div>
+
+        <div class="arch-nodes-container">
+          <!-- Node 1 -->
+          <div class="arch-node-item">
+            <div class="arch-node-top">
+              <span class="arch-node-step">NODE 01</span>
+              <div class="arch-node-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+            </div>
+            <div class="arch-node-title">E-book</div>
+            <div class="arch-node-desc">Patron requests access to licensed academic digital monograph.</div>
+          </div>
+
+          <div class="arch-node-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+
+          <!-- Node 2 -->
+          <div class="arch-node-item">
+            <div class="arch-node-top">
+              <span class="arch-node-step">NODE 02</span>
+              <div class="arch-node-icon amber">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </div>
+            </div>
+            <div class="arch-node-title">Licence Check</div>
+            <div class="arch-node-desc">Concurrency engine queries 5-licence pool capacity (N &lt; 5).</div>
+          </div>
+
+          <div class="arch-node-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+
+          <!-- Node 3 -->
+          <div class="arch-node-item">
+            <div class="arch-node-top">
+              <span class="arch-node-step">NODE 03</span>
+              <div class="arch-node-icon teal">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </div>
+            </div>
+            <div class="arch-node-title">Licence Allocation</div>
+            <div class="arch-node-desc">Atomic test-and-set mutex assigns token, rejecting concurrent races.</div>
+          </div>
+
+          <div class="arch-node-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+
+          <!-- Node 4 -->
+          <div class="arch-node-item">
+            <div class="arch-node-top">
+              <span class="arch-node-step">NODE 04</span>
+              <div class="arch-node-icon green">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </div>
+            </div>
+            <div class="arch-node-title">Digital Session</div>
+            <div class="arch-node-desc">Encrypted e-reader opens with live patron interaction watchdog.</div>
+          </div>
+
+          <div class="arch-node-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+
+          <!-- Node 5 -->
+          <div class="arch-node-item">
+            <div class="arch-node-top">
+              <span class="arch-node-step">NODE 05</span>
+              <div class="arch-node-icon amber">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+            </div>
+            <div class="arch-node-title">20-Min Idle Timeout</div>
+            <div class="arch-node-desc">Background timer detects inactivity without patron keepalive.</div>
+          </div>
+
+          <div class="arch-node-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+
+          <!-- Node 6 -->
+          <div class="arch-node-item">
+            <div class="arch-node-top">
+              <span class="arch-node-step">NODE 06</span>
+              <div class="arch-node-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+            </div>
+            <div class="arch-node-title">Licence Released</div>
+            <div class="arch-node-desc">Token returns to institutional pool immediately for waiting scholars.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specifications & Academic Project Formulation -->
+  <section class="landing-section" id="specifications">
+    <div class="academic-specs-card">
+      <div class="specs-grid-inner">
+        <div class="spec-item-box">
+          <div class="spec-item-title">Total Library Volumes</div>
+          <div class="spec-item-val">340,000 Volumes</div>
+          <div class="spec-item-sub">100% UHF / HF RFID Tagged</div>
+        </div>
+        <div class="spec-item-box">
+          <div class="spec-item-title">Handheld Fleet & Sweep Rate</div>
+          <div class="spec-item-val">6 Handheld Readers</div>
+          <div class="spec-item-sub">180 Tags / Min / Handheld</div>
+        </div>
+        <div class="spec-item-box">
+          <div class="spec-item-title">Theoretical Verification Time</div>
+          <div class="spec-item-val">314.8 Min (5h 15m)</div>
+          <div class="spec-item-sub">340,000 ÷ (180 × 6 devices)</div>
+        </div>
+        <div class="spec-item-box">
+          <div class="spec-item-title">Circulation & Lending Policy</div>
+          <div class="spec-item-val">14-Day Loans • ₹5/Day Fine</div>
+          <div class="spec-item-sub">5 Concurrent Licences • 20-Min Idle</div>
+        </div>
+      </div>
+
+      <div class="academic-team-line">
+        <div>
+          <strong style="color: var(--text-primary);">Academic Project Credentials:</strong>
+          <span> B.Tech Computer Science & Engineering • 15 KLOC Codebase • 3 Developers + Part-time Designer</span>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <a href="stock-verification.html" class="btn btn-secondary btn-sm">Inspect Handhelds</a>
+          <a href="dashboard.html" class="btn btn-primary btn-sm">Enter Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="landing-footer">
+    <div class="landing-footer-inner">
+      <div>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+          <div class="brand-icon" style="width: 22px; height: 22px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <span style="font-size: 16px; font-weight: 700; color: #FFFFFF;">ShelfMind</span>
+        </div>
+        <p style="font-size: 13px; color: #94A3B8; margin: 0;">RFID Library Automation & Digital Lending Platform</p>
+      </div>
+
+      <div style="font-size: 12.5px; color: #64748B; text-align: right;">
+        <div>B.Tech CSE Capstone Project • Software Engineering & Project Management</div>
+        <div style="margin-top: 4px;">ISO 15693 / 18000-3 Telemetry Simulation Active</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Command Palette Modal (⌘ K) -->
+  <div class="command-palette-overlay" id="commandPalette" onclick="handlePaletteBackdrop(event)">
+    <div class="command-palette-box" onclick="event.stopPropagation()">
+      <div class="command-search-bar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="commandInput" placeholder="Type a command or jump to page... (e.g. books, scan, stock)" oninput="filterCommandPalette(this.value)">
+        <span class="kbd-badge">ESC</span>
+      </div>
+      <div class="command-items-list" id="commandItemsList">
+        <div class="command-group-title">Navigation Shortcuts</div>
+        <a href="dashboard.html" class="command-item">
+          <div class="command-item-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Overview Dashboard</span>
+          </div>
+          <span style="font-size: 11px; color: var(--text-muted);">Jump</span>
+        </a>
+        <a href="books.html" class="command-item">
+          <div class="command-item-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            <span>Search Books & Inventory</span>
+          </div>
+          <span style="font-size: 11px; color: var(--text-muted);">Jump</span>
+        </a>
+        <a href="issue-return.html" class="command-item">
+          <div class="command-item-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20"></path></svg>
+            <span>RFID Issue & Return Station</span>
+          </div>
+          <span style="font-size: 11px; color: var(--text-muted);">Circulation</span>
+        </a>
+        <a href="stock-verification.html" class="command-item">
+          <div class="command-item-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon></svg>
+            <span>Start Stock Verification (6 Handhelds)</span>
+          </div>
+          <span style="font-size: 11px; color: var(--text-muted);">Operations</span>
+        </a>
+        <a href="digital-library.html" class="command-item">
+          <div class="command-item-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect></svg>
+            <span>Controlled Digital Lending & Race Condition Demo</span>
+          </div>
+          <span style="font-size: 11px; color: var(--text-muted);">5-Slot Pool</span>
+        </a>
+        <a href="gate-security.html" class="command-item">
+          <div class="command-item-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Gate Security Surveillance Monitor</span>
+          </div>
+          <span style="font-size: 11px; color: var(--text-muted);">EAS Bit</span>
+        </a>
+        <a href="reports.html" class="command-item">
+          <div class="command-item-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            <span>Analytics & Audit Reports</span>
+          </div>
+          <span style="font-size: 11px; color: var(--text-muted);">Charts</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <script src="js/mock-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
